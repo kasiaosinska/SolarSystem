@@ -6755,4 +6755,55 @@ button.close {
   }
 }
 * {
-  background-color: pink; }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #e7536b;
+  margin-bottom: 0;
+}
+
+.navbar .navbar-text {
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navbar .navbar-text .navbar-link {
+  color: #f5efda;
+}
+
+.navbar .navbar-text .navbar-link:hover {
+  text-decoration: none;
+  color: #5e5e5e;
+}
+
+.navbar-brand {
+  height: 100%;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.planet-info {
+  background-color: #2e3b4e;
+  color: #f5efda;
+}
+
+.solar-system {
+  background: url("http://68.media.tumblr.com/de5c442418ca5e89a607946bcbe51fd4/tumblr_o0i8083kzM1teue7jo1_1280.jpg");
+  height: 400px;
+}
+
+.solar-system h1 {
+  color: #f5efda;
+  text-align: center;
+  line-height: 400px;
+}
+
+.icons {
+  text-align: center;
+}

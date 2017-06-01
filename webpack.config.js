@@ -21,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.(sass|scss)$/,
-                loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+                loader: ExtractTextPlugin.extract(['css-loader','resolve-url-loader', 'sass-loader'])
             },
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/,
