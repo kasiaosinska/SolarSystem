@@ -29,13 +29,13 @@ class OnePicEveryDay extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-xs-6">
+                    <div className="col-md-12">
                         <div>
                             {this.state.type === 'image' ? <img src={this.state.link} /> :
                                 <video controls><source src={this.state.link}/></video>}
                         </div>
                     </div>
-                    <div className="col-xs-6">
+                    <div className="col-md-12">
                         <div className="row">
                             {this.state.title}
                         </div>

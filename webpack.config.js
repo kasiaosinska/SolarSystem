@@ -1,39 +1,38 @@
-const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const extractSass = new ExtractTextPlugin({
-    filename: "main.css",
-    disable: process.env.NODE_ENV === "output"
-});
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: ["whatwg-fetch", "./dev/app.jsx"],
+    entry: ['./dev/app.jsx', './dev/main.scss'],
     output: {
-        path: path.resolve("output"),
-        filename: "out.js"
+        filename: 'output/out.js'
     },
     watch: true,
-    module:	{
-        loaders: [
+    module: {
+        rules: [
             {
-                test: /\.jsx$/, exclude: /node_modules/,
+                test: /\.jsx?/,
                 loader: 'babel-loader',
-                query: { presets: ['es2015', 'stage-2', 'react']}
+                query: {
+                    presets: ['es2015', 'stage-2', 'react']
+                }
             },
             {
-                test: /\.scss$/,
-                use: extractSass.extract({
-                    use: [{
-                        loader: "css-loader"
-                    }, {
-                        loader: "sass-loader"
-                    }],
-                    fallback: "style-loader"
-                })
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract(['style-loader', 'css-loader'])
+            },
+            {
+                test: /\.(sass|scss)$/,
+                loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000'
             }
         ]
     },
     plugins: [
-        extractSass
+        new ExtractTextPlugin({
+            filename: 'output/style.css',
+            allChunks: true
+        })
     ]
 };
