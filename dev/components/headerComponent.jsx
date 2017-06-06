@@ -1,23 +1,25 @@
 import React from 'react';
-import {Nav, NavItem} from 'react-bootstrap'
+import {Navbar, NavItem, Nav} from 'react-bootstrap'
 
 
 class Header extends React.Component {
 
     render() {
         return (
-
-            <nav className="navbar navbar-default header">
-                <div className="container">
-                    <div className="navbar-header">
-                        <a className="navbar-brand" href="#">
-                            <img alt="Brand" src="./logo-xs.png"/>
-                        </a>
-                    </div>
-                    <p className="navbar-text navbar-right"><a href="#" className="navbar-link">About Me</a></p>
-                </div>
-            </nav>
-
+        <Navbar className="navbar">
+            <Navbar.Header>
+                <Navbar.Brand className="navbar-brand">
+                    <a href="#">
+                        <img alt="Brand" src="./logo-xs.png"/>
+                    </a>
+                </Navbar.Brand>
+            </Navbar.Header>
+            <Nav pullRight className="navbar-text">
+                <NavItem eventKey={1}>
+                    <a href="#" className="link">ABOUT ME</a>
+                </NavItem>
+            </Nav>
+        </Navbar>
         )
     }
 }

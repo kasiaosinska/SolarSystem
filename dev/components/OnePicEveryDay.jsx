@@ -22,25 +22,25 @@ class OnePicEveryDay extends React.Component {
             )
             .then(link => this.setState({type: this.output.typ, link: this.output.url,
                 title: this.output.title, explanation: this.output.description}));
-            console.log(this.state.type);
-        console.log(this.state.link)
     }
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div>
-                            {this.state.type === 'image' ? <img src={this.state.link} /> :
-                                <video controls><source src={this.state.link}/></video>}
+            <div className="container-fluid nasa">
+                <div className="container">
+                    <div className="row nasa-item">
+                        <h4>{this.state.title}</h4>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="image">
+                                {this.state.type === 'image' ? <img src={this.state.link} /> :
+                                    <video controls><source src={this.state.link}/></video>}
+                            </div>
                         </div>
                     </div>
-                    <div className="col-md-12">
-                        <div className="row">
-                            {this.state.title}
-                        </div>
-                        <div className="row">
-                            {this.state.explanation}
+                    <div className="row">
+                        <div className="col-md-12">
+                            <p className="image-description">{this.state.explanation}</p>
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import Header from "./components/headerComponent.jsx";
 import SolarSystem from "./components/solarSystem.jsx";
 import OnePicEveryDay from "./components/OnePicEveryDay.jsx";
 import PlanetInfo from "./components/planetInfo.jsx";
+import Section from "./components/sectionComponent.jsx"
 import Footer from "./components/footerComponent.jsx";
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
                 <Header/>
                 <SolarSystem/>
                 <PlanetInfo/>
+                <Section/>
                 <OnePicEveryDay/>
                 <Footer/>
             </div>
