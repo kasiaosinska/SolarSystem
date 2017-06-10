@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import	{Router, Route, Link, IndexLink, IndexRoute, hashHistory} from 'react-router';
 
 //components
 import Header from "./components/headerComponent.jsx";

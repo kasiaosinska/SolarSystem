@@ -1,4 +1,6 @@
 import React from 'react';
+import { Media, Player, controls } from 'react-media-player';
+const { PlayPause, MuteUnmute, } = controls;
 
 
 class OnePicEveryDay extends React.Component {
@@ -22,7 +24,24 @@ class OnePicEveryDay extends React.Component {
             )
             .then(link => this.setState({type: this.output.typ, link: this.output.url,
                 title: this.output.title, explanation: this.output.description}));
+
+            console.log(this.state.link);
     }
+    showVideo = () => {
+        return (
+            <Media>
+                <div className="media">
+                    <div className="media-player">
+                        <Player src={this.state.link}/>
+                    </div>
+                    <div className="media-controls">
+                        <PlayPause/>
+                        <MuteUnmute/>
+                    </div>
+                </div>
+            </Media>
+        )
+    };
     render() {
         return (
             <div className="container-fluid nasa">
@@ -33,8 +52,10 @@ class OnePicEveryDay extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="image">
-                                {this.state.type === 'image' ? <img src={this.state.link} /> :
-                                    <video controls><source src={this.state.link}/></video>}
+                                {this.state.type === 'image' ?
+                                <img src={this.state.link} /> :
+                                this.showVideo()
+                                }
                             </div>
                         </div>
                     </div>

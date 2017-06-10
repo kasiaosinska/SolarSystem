@@ -15,9 +15,7 @@ class Header extends React.Component {
                 </Navbar.Brand>
             </Navbar.Header>
             <Nav pullRight className="navbar-text">
-                <NavItem eventKey={1}>
-                    <a href="#" className="link">ABOUT ME</a>
-                </NavItem>
+                <NavItem eventKey={1} href="#" className="link">ABOUT ME</NavItem>
             </Nav>
         </Navbar>
         )

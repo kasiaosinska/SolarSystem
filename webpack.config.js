@@ -5,6 +5,11 @@ module.exports = {
     output: {
         filename: 'output/out.js'
     },
+    devServer: {
+        inline:	true,
+        contentBase: './',
+        port: 3001
+    },
     watch: true,
     module: {
         rules: [
@@ -26,7 +31,8 @@ module.exports = {
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/,
                 loader: 'url-loader?limit=100000'
-            }
+            },
+
         ]
     },
     plugins: [
