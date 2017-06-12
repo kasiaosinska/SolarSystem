@@ -1,5 +1,6 @@
 import React from 'react';
-import {Navbar, NavItem, Nav} from 'react-bootstrap'
+import {Navbar, NavItem, Nav} from 'react-bootstrap';
+import NavLink from 'react-router-dom';
 
 
 class Header extends React.Component {
@@ -16,6 +17,8 @@ class Header extends React.Component {
             </Navbar.Header>
             <Nav pullRight className="navbar-text">
                 <NavItem eventKey={1} href="#" className="link">ABOUT ME</NavItem>
+                {/*<NavLink avtiveClassName="active" to="/">Home</NavLink>*/}
+                {/*<NavLink avtiveClassName="active" to="/SolarSystem">Solar System</NavLink>*/}
             </Nav>
         </Navbar>
         )

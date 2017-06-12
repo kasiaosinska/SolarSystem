@@ -1,25 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import	{Router, Route, Link, IndexLink, IndexRoute, hashHistory} from 'react-router';
+import	{Router, Route,} from 'react-router-dom';
 
 //components
-import Header from "./components/headerComponent.jsx";
-import SolarSystem from "./components/solarSystem.jsx";
-import OnePicEveryDay from "./components/OnePicEveryDay.jsx";
-import PlanetInfo from "./components/planetInfo.jsx";
-import Section from "./components/sectionComponent.jsx"
-import Footer from "./components/footerComponent.jsx";
+import Home from "./home.jsx";
+import SolarSystemSite from "./solarSystem.jsx";
+
 
 class App extends React.Component {
     render() {
         return (
             <div>
-                <Header/>
-                <SolarSystem/>
-                <PlanetInfo/>
-                <Section/>
-                <OnePicEveryDay/>
-                <Footer/>
+                <Home/>
             </div>
         )
     }
