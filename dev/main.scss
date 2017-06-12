@@ -1,6 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 //colors
 $white-smokey: #f5efda;
+$white-smokey-opacity: rgba(245,239,218,0.1);
 $pink: #e7536b;
 $grey: #5e5e5e;
 $darkBlue: #2e3b4e;
@@ -16,14 +17,18 @@ $darkBlue: #2e3b4e;
     margin-bottom: 0;
     border: 0;
     border-radius: 0;
+    padding: 0;
+    height: 100px;
     .navbar-text {
-        margin-top: 25px;
-        text-transform: uppercase;
         font-size: 20px;
         font-weight: 500;
+        margin: 0;
         .link {
             a {
                 color: $white-smokey;
+                padding: 0;
+                margin-right: 15px;
+                line-height: 100px;
                 &:hover {
                     text-decoration: none;
                     color: $grey;
@@ -35,9 +40,7 @@ $darkBlue: #2e3b4e;
 
 .navbar-brand {
     height: 100%;
-    padding-left: 20px;
-    margin-left: 20px;
-    margin-bottom: 0;
+    line-height: 100px;
 }
 
 .planet-info {
@@ -76,6 +79,7 @@ $darkBlue: #2e3b4e;
     padding: 0;
     background: url('./images/trees.jpg');
     background-size: cover;
+    background-position: center center;
     opacity: percentage(0.5);
     height: 400px;
     .pink-opacity {
@@ -108,4 +112,40 @@ $darkBlue: #2e3b4e;
     font-size: 18px;
 }
 
+//----------Home
 
+.nav-home {
+    background-color: transparent;
+    border-bottom: 0.1px solid $white-smokey-opacity;
+    .link-home{
+        a {
+            &:hover {
+                color: $white-smokey !important;
+                border-bottom: 1px solid $white-smokey !important;
+            }
+        }
+    }
+}
+
+
+.section-with-img {
+    background: url("./images/stars.jpg") center no-repeat;
+    background-size: cover;
+    height: 800px;
+    margin-top: -98px;
+}
+
+.section-about-me {
+    background-color: $darkBlue;
+    min-height: 400px;
+    height: 100%;
+    .dark-blue-section {
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+}
+
+.footer {
+    background-color: $pink;
+    overflow: hidden;
+}

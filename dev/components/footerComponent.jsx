@@ -1,13 +1,12 @@
 import React from 'react';
-import {Nav, NavItem, Col, Row} from 'react-bootstrap'
+import { Col, Row} from 'react-bootstrap'
 
 
 class Footer extends React.Component {
 
     render() {
         return (
-
-            <nav className="navbar navbar-default header">
+            <footer className="footer">
                 <div className="container">
                     <Row className="icons">
                         <Col className="col-md-4">
@@ -21,8 +20,7 @@ class Footer extends React.Component {
                         </Col>
                     </Row>
                 </div>
-            </nav>
-
+            </footer>
         )
     }
 }

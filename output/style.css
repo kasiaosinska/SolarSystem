@@ -6765,17 +6765,21 @@ button.close {
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
+  padding: 0;
+  height: 100px;
 }
 
 .navbar .navbar-text {
-  margin-top: 25px;
-  text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
+  margin: 0;
 }
 
 .navbar .navbar-text .link a {
   color: #f5efda;
+  padding: 0;
+  margin-right: 15px;
+  line-height: 100px;
 }
 
 .navbar .navbar-text .link a:hover {
@@ -6785,9 +6789,7 @@ button.close {
 
 .navbar-brand {
   height: 100%;
-  padding-left: 20px;
-  margin-left: 20px;
-  margin-bottom: 0;
+  line-height: 100px;
 }
 
 .planet-info {
@@ -6830,6 +6832,7 @@ button.close {
   padding: 0;
   background: url(../output/images/trees.jpg);
   background-size: cover;
+  background-position: center center;
   opacity: 50%;
   height: 400px;
 }
@@ -6861,4 +6864,37 @@ button.close {
 .image-description {
   margin: 30px;
   font-size: 18px;
+}
+
+.nav-home {
+  background-color: transparent;
+  border-bottom: 0.1px solid rgba(245, 239, 218, 0.1);
+}
+
+.nav-home .link-home a:hover {
+  color: #f5efda !important;
+  border-bottom: 1px solid #f5efda !important;
+}
+
+.section-with-img {
+  background: url(../output/images/stars.jpg) center no-repeat;
+  background-size: cover;
+  height: 800px;
+  margin-top: -98px;
+}
+
+.section-about-me {
+  background-color: #2e3b4e;
+  min-height: 400px;
+  height: 100%;
+}
+
+.section-about-me .dark-blue-section {
+  padding-right: 20%;
+  padding-left: 20%;
+}
+
+.footer {
+  background-color: #e7536b;
+  overflow: hidden;
 }
