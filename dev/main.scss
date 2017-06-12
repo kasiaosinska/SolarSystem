@@ -1,7 +1,9 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 //colors
 $white-smokey: #f5efda;
-
+$pink: #e7536b;
+$grey: #5e5e5e;
+$darkBlue: #2e3b4e;
 
 * {
     margin: 0;
@@ -10,7 +12,7 @@ $white-smokey: #f5efda;
 }
 
 .navbar {
-    background-color: #e7536b;
+    background-color: $pink;
     margin-bottom: 0;
     border: 0;
     border-radius: 0;
@@ -20,10 +22,12 @@ $white-smokey: #f5efda;
         font-size: 20px;
         font-weight: 500;
         .link {
-            color: $white-smokey;
-            &:hover {
-                text-decoration: none;
-                color: #5e5e5e;
+            a {
+                color: $white-smokey;
+                &:hover {
+                    text-decoration: none;
+                    color: $grey;
+                }
             }
         }
     }
@@ -37,7 +41,7 @@ $white-smokey: #f5efda;
 }
 
 .planet-info {
-    background-color: #2e3b4e;
+    background-color: $darkBlue;
     color: $white-smokey;
     .container {
         margin-top: 50px;
@@ -72,7 +76,6 @@ $white-smokey: #f5efda;
     padding: 0;
     background: url('./images/trees.jpg');
     background-size: cover;
-    background-position-y: percentage(4);
     opacity: percentage(0.5);
     height: 400px;
     .pink-opacity {

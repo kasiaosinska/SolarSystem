@@ -29,9 +29,13 @@ module.exports = {
                 loader: ExtractTextPlugin.extract(['css-loader','resolve-url-loader', 'sass-loader'])
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/,
-                loader: 'url-loader?limit=100000'
+                test: /\.(svg|woff|woff2|ttf|eot)$/,
+                loader: 'file-loader?publicPath=../&name=output/fonts/[name].[ext]'
             },
+            {
+                test: /\.(jpg|jpeg|gif|png)$/,
+                loader: 'file-loader?publicPath=../&name=output/images/[name].[ext]'
+            }
 
         ]
     },
