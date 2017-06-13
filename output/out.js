@@ -20512,9 +20512,15 @@ var Skills = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "rocket-fire" },
-                        _react2.default.createElement("div", { className: "fire orange-fire" }),
-                        _react2.default.createElement("div", { className: "fire red-fire" }),
-                        _react2.default.createElement("div", { className: "fire yellow-fire" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "fire yellow-fire" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "fire orange-fire" },
+                                _react2.default.createElement("div", { className: "fire red-fire" })
+                            )
+                        )
                     )
                 ),
                 _react2.default.createElement(
