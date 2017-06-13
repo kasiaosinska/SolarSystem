@@ -5,9 +5,10 @@ import React from 'react';
 import Nav from './components/nav.jsx';
 import Header from './components/headerComponent.jsx'
 import Footer from './components/footerComponent.jsx';
-import Section from './components/sectionComponent.jsx';
+import SectionTrees from './components/sectionComponent.jsx';
 import SectionWithPic from './components/sectionWithPic.jsx';
-import AboutMe from './components/aboutMe.jsx'
+import AboutMe from './components/aboutMe.jsx';
+import Skills from './components/skills.jsx';
 
 class Home extends React.Component {
     render () {
@@ -16,11 +17,10 @@ class Home extends React.Component {
                 <Header additionalMainClass="nav-home" additionalLinkClass="link-home" />
                 <SectionWithPic/>
                 <AboutMe/>
-                <Section>
-                    <div className="pink-opacity"/>
-                </Section>
+                <SectionTrees additionalOpacityClass="pink-opacity" additionalShowClass="button-pink"
+                              buttonText="See All Projects"/>
+                <Skills/>
                 <Footer/>
-
             </div>
         )
     }

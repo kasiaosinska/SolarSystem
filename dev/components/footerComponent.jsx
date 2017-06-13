@@ -13,7 +13,7 @@ class Footer extends React.Component {
                             <img alt="Brand" src="./earth.png"/>
                         </Col>
                         <Col className="col-md-4">
-                            <img className="rocket" alt="Brand" src="./rocket1.png" />
+                            <img className="rocket-icon" alt="Brand" src="./rocket1.png" />
                         </Col>
                         <Col className="col-md-4">
                             <img alt="Brand" src="./planet.png"/>
