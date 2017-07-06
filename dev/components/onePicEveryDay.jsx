@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image} from 'react-bootstrap';
 import { Media, Player, controls } from 'react-media-player';
 const { PlayPause, MuteUnmute, } = controls;
 
@@ -44,7 +45,7 @@ class OnePicEveryDay extends React.Component {
     };
     render() {
         return (
-            <div className="container-fluid nasa">
+            <div className="container-fluid nasa" classID="nasa-section">
                 <div className="container">
                     <div className="row nasa-item">
                         <h4>{this.state.title}</h4>
@@ -53,7 +54,7 @@ class OnePicEveryDay extends React.Component {
                         <div className="col-md-12">
                             <div className="image">
                                 {this.state.type === 'image' ?
-                                <img src={this.state.link} /> :
+                                <Image src={this.state.link} responsive /> :
                                 this.showVideo()
                                 }
                             </div>

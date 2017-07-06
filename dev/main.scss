@@ -7,6 +7,7 @@
 //colors
 $white-smokey: #f5efda;
 $white-smokey-opacity: rgba(245,239,218,0.1);
+$white: #fff;
 $pink: #e7536b;
 $grey: #5e5e5e;
 $darkBlue: #2e3b4e;
@@ -17,8 +18,14 @@ $darkBlue: #2e3b4e;
     box-sizing: border-box;
 }
 
+*:active, *:focus, *:link {
+    outline: none !important;
+    outline-offset: 0 !important;
+    text-decoration: none !important;
+}
+
 .navbar {
-    background-color: $pink;
+    background-color: transparent;
     margin-bottom: 0;
     border: 0;
     border-radius: 0;
@@ -27,17 +34,16 @@ $darkBlue: #2e3b4e;
     .navbar-text {
         font-size: 20px;
         font-weight: 500;
-        margin: 0;
-        .link {
-            a {
-                color: $white-smokey;
-                padding: 0;
-                margin-right: 15px;
-                line-height: 100px;
-                &:hover {
-                    text-decoration: none;
-                    color: $grey;
-                }
+        margin-top: 15px;
+        .name {
+            color: $white-smokey;
+            font-family: 'Amatic SC', cursive;
+            font-size: 50px;
+            font-weight: 700;
+            margin-top: 30px;
+            &:hover {
+                text-decoration: none;
+                color: $grey;
             }
         }
     }
@@ -47,6 +53,20 @@ $darkBlue: #2e3b4e;
     height: 100%;
     line-height: 100px;
 }
+
+
+.solar-system {
+    background: url("http://68.media.tumblr.com/de5c442418ca5e89a607946bcbe51fd4/tumblr_o0i8083kzM1teue7jo1_1280.jpg");
+    background-size: cover;
+    height: 700px;
+    margin-top: -100px;
+    text-align: center;
+    h1 {
+        color: $white-smokey;
+        line-height: 700px;
+    }
+}
+
 
 .planet-info {
     background-color: $darkBlue;
@@ -61,24 +81,7 @@ $darkBlue: #2e3b4e;
     }
 }
 
-.solar-system {
-    background: url("http://68.media.tumblr.com/de5c442418ca5e89a607946bcbe51fd4/tumblr_o0i8083kzM1teue7jo1_1280.jpg");
-    background-size: cover;
-    height: 700px;
-    h1 {
-        color: $white-smokey;
-        text-align: center;
-        line-height: 700px;
-    }
-}
 
-.icons {
-    text-align: center;
-    .rocket-icon {
-        transform: rotate(50deg);
-        transform-origin: 50% 50%;
-    }
-}
 
 .section-trees {
     padding: 0;
@@ -95,8 +98,25 @@ $darkBlue: #2e3b4e;
 }
 
 //button
-.hidden-button {
-    display: none;
+
+.button-position {
+    vertical-align: middle;
+    text-align: center;
+    .button-purple {
+        float: none !important;
+        margin-top: 180px;
+        padding: 20px 50px;
+        border-radius: 800px;
+        &:hover {
+            background-color: $white;
+        }
+        p {
+            margin: 0;
+            font-family: 'Amatic SC', cursive;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    }
 }
 
 .nasa {
@@ -114,7 +134,7 @@ $darkBlue: #2e3b4e;
 }
 
 .image {
-    text-align: center;
+    margin: 0 auto;
 }
 
 .image-description {
@@ -122,294 +142,40 @@ $darkBlue: #2e3b4e;
     font-size: 18px;
 }
 
-//----------Home
-
-.nav-home {
-    background-color: transparent;
-    border-bottom: 0.1px solid $white-smokey-opacity;
-    .link-home{
-        a {
-            &:hover {
-                color: $white-smokey !important;
-                border-bottom: 1px solid $white-smokey !important;
-            }
-        }
-    }
-}
-
-
-.section-with-img {
-    background: url("./images/stars.jpg") center no-repeat;
-    background-size: cover;
-    height: 800px;
-    margin-top: -98px;
-}
-
-.section-about-me {
-    background-color: $darkBlue;
-    min-height: 400px;
-    height: 100%;
-    .dark-blue-section {
-        padding-right: 20%;
-        padding-left: 20%;
-    }
-}
+//footer
 
 .footer {
     background-color: $pink;
     overflow: hidden;
 }
 
-.pink-opacity {
-    height: 400px;
-    width: 100%;
-    background-color: rgba(185,66,86,0.5) !important;
-}
-
-//button
-.button-position {
-    margin-left: 0;
+.icons {
     text-align: center;
-    .button-pink {
-        float: none !important;
-        margin: 160px;
-        display: inline-block !important;
-        color: $pink;
-        font-size: 20px;
-        font-weight: 700;
-        border-radius: 500px;
-        padding: 20px 100px;
+    .rocket-icon {
+        transform: rotate(50deg);
+        transform-origin: 50% 50%;
     }
 }
 
-//rocket section
-
-.sky {
-    background: #43C6AC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 500px;
-    padding: 0;
-    .rocket{
-        height: 150px;
-        width: 400px;
-        margin: 150px auto 0;
-        background: url("./images/rocketForAnimation.png") center center no-repeat;
-        position: relative;
-        z-index: 1;
-        .rocket-fire {
-            height: 50px;
-            width: 87px;
-            padding-top: 55px;
-            padding-right: 0px;
-            direction: rtl;
-            transform: rotate(45deg);
-            .fire {
-                border-top-left-radius: 50%;
-                border-top-right-radius: 50%;
-                border-bottom-right-radius: 50%;
-                background-color: orange;
-            }
-            .orange-fire {
-                width: 35px;
-                height: 35px;
-                background-color: orange;
-            }
-            .red-fire {
-                width: 25px;
-                height: 25px;
-                background-color: red;
-            }
-            .yellow-fire {
-                width: 50px;
-                height: 50px;
-                background-color: yellow;
-            }
+@media (max-width: 767px) {
+    .name {
+        font-size: 15px !important;
+    }
+    .button-purple {
+        p {
+            font-size: 15px !important;
         }
-
+    }
+    .solar-system {
+        height: 400px !important;
+        h1 {
+            line-height: 400px !important;
+            text-align: justify !important;
+            font-size: 25px !important;
+        }
+    }
+    .image-description {
+        font-size: 15px !important;
+        margin: 5px !important;
     }
 }
-
-.cloud{
-    width: 22.5em;
-    height: 7.5em;
-    background: #f2f9fe;
-    -moz-border-radius: 6.25em;
-    -webkit-border-radius: 6.25em;
-    border-radius: 6.25em;
-    position: relative;
-}
-.cloud:after, .cloud:before{
-    content: "";
-    position: absolute;
-    background: #f2f9fe;
-    z-index: -1;
-    border-radius: 50%;
-}
-.cloud:after{
-    width: 7.5em;
-    height: 7.5em;
-    top: -3.125em;
-    left: 3.125em;
-}
-.cloud:before{
-    width: 11.25em;
-    height: 11.25em;
-    top: -5.625em;
-    right: 3.125em;
-}
-
-.skills{
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Amatic SC', cursive;
-}
-
-.cloud.s1{
-    -moz-transform: scale(0.9, 0.9);
-    -ms-transform: scale(0.9, 0.9);
-    -webkit-transform: scale(0.9, 0.9);
-    transform: scale(0.9, 0.9);
-    -webkit-animation: moveclouds 18s linear infinite;
-    -moz-animation: moveclouds 18s linear infinite;
-    -o-animation: moveclouds 18s linear infinite;
-}
-.cloud.s2{
-    -moz-transform: scale(0.7, 0.7);
-    -ms-transform: scale(0.7, 0.7);
-    -webkit-transform: scale(0.7, 0.7);
-    transform: scale(0.7, 0.7);
-    -webkit-animation: moveclouds 25s linear infinite;
-    -moz-animation: moveclouds 25s linear infinite;
-    -o-animation: moveclouds 25s linear infinite;
-}
-.cloud.s3{
-    top: -15.5em;
-    -moz-transform: scale(0.5, 0.5);
-    -ms-transform: scale(0.5, 0.5);
-    -webkit-transform: scale(0.5, 0.5);
-    transform: scale(0.5, 0.5);
-    -webkit-animation: moveclouds 30s linear infinite;
-    -moz-animation: moveclouds 30s linear infinite;
-    -o-animation: moveclouds 30s linear infinite;
-}
-.cloud.s4{
-    top: -40.65em;
-    -moz-transform: scale(0.6, 0.6);
-    -ms-transform: scale(0.6, 0.6);
-    -webkit-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
-    -webkit-animation: moveclouds 28s linear infinite;
-    -moz-animation: moveclouds 28s linear infinite;
-    -o-animation: moveclouds 28s linear infinite;
-}
-.cloud.s5{
-    top: -40em;
-    -moz-transform: scale(0.5, 0.5);
-    -ms-transform: scale(0.5, 0.5);
-    -webkit-transform: scale(0.5, 0.5);
-    transform: scale(0.5, 0.5);
-    -webkit-animation: moveclouds 23s linear infinite;
-    -moz-animation: moveclouds 23s linear infinite;
-    -o-animation: moveclouds 23s linear infinite;
-}
-.cloud.s6{
-    top: -53em;
-    left: 20em;
-    -moz-transform: scale(0.9, 0.9);
-    -ms-transform: scale(0.9, 0.9);
-    -webkit-transform: scale(0.9, 0.9);
-    transform: scale(0.9, 0.9);
-    -webkit-animation: moveclouds 18s linear infinite;
-    -moz-animation: moveclouds 18s linear infinite;
-    -o-animation: moveclouds 18s linear infinite;
-}
-
-.cloud.s7{
-    top: -40em;
-    left: 50em;
-    -moz-transform: scale(0.7, 0.7);
-    -ms-transform: scale(0.7, 0.7);
-    -webkit-transform: scale(0.7, 0.7);
-    transform: scale(0.7, 0.7);
-    -webkit-animation: moveclouds 20s linear infinite;
-    -moz-animation: moveclouds 20s linear infinite;
-    -o-animation: moveclouds 20s linear infinite;
-}
-
-.cloud.s8{
-    top: -70em;
-    left: 60em;
-    -moz-transform: scale(0.6, 0.6);
-    -ms-transform: scale(0.6, 0.6);
-    -webkit-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
-    -webkit-animation: moveclouds 28s linear infinite;
-    -moz-animation: moveclouds 28s linear infinite;
-    -o-animation: moveclouds 28s linear infinite;
-}
-
-.cloud.s9{
-    top: -60em;
-    left: 40em;
-    -moz-transform: scale(0.6, 0.6);
-    -ms-transform: scale(0.6, 0.6);
-    -webkit-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
-    -webkit-animation: moveclouds 28s linear infinite;
-    -moz-animation: moveclouds 28s linear infinite;
-    -o-animation: moveclouds 28s linear infinite;
-}
-
-.cloud.s10{
-    top: -80em;
-    left: 40em;
-    -moz-transform: scale(0.6, 0.6);
-    -ms-transform: scale(0.6, 0.6);
-    -webkit-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
-    -webkit-animation: moveclouds 28s linear infinite;
-    -moz-animation: moveclouds 28s linear infinite;
-    -o-animation: moveclouds 28s linear infinite;
-}
-
-@-webkit-keyframes moveclouds{
-    0%{
-        margin-left: 100%;
-    }
-    100%{
-        margin-left: -70%;
-    }
-}
-@-moz-keyframes moveclouds{
-    0%{
-        margin-left: 100%;
-    }
-    100%{
-        margin-left: -70%;
-    }
-}
-@-o-keyframes moveclouds{
-    0%{
-        margin-left: 100%;
-    }
-    100%{
-        margin-left: -70%;
-    }
-}
-
-@keyframes slide {
-    0% {
-        width: 100%;
-    }
-    50% {
-        width: 50%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-
-
-
