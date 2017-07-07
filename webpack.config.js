@@ -33,7 +33,7 @@ module.exports = {
                 loader: 'file-loader?publicPath=../&name=output/fonts/[name].[ext]'
             },
             {
-                test: /\.(jpg|jpeg|gif|png)$/,
+                test: /\.(png|jpg|jpeg|gif)$/,
                 loader: 'file-loader?publicPath=../&name=output/images/[name].[ext]'
             }
 
